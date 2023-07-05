@@ -1,6 +1,8 @@
 package fibonacci;
 
-
+/**
+ * The code is intended to generate a Fibonacci sequence up to a given length.
+ */
 public class Fibonacci {
 
     private final short size;
