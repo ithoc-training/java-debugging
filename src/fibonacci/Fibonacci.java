@@ -19,8 +19,11 @@ public class Fibonacci {
 
         Long[] fibonacciSequence = new Long[size + 1];
         fibonacciSequence[0] = 0L;
+        fibonacciSequence[1] = 1L; // Error 2: Initialisation of second element was missing.
 
-        for (int i = 3; i <= size + 1; i++) {
+        for (int i = 2; i <= size; i++) {
+            // Error 3: Index startet from 3 instead of 2.
+            // Error 4: Size was added by one what was wrong.
             fibonacciSequence[i] = fibonacciSequence[i - 1] + fibonacciSequence[i - 2];
         }
 
