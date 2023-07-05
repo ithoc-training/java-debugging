@@ -21,7 +21,8 @@ public class Notebook {
 
         String names = "";
         for (Person person : persons) {
-            names += person.name() + System.getProperty("line.separator") + person.getAddress().toString() + System.getProperty("line.separator");
+            names += person.name() + System.getProperty("line.separator") + person.getAddress() + System.getProperty("line.separator");
+            // Error 1: Address was null and toString() called.
         }
 
         return names;
@@ -32,7 +33,7 @@ public class Notebook {
 
         for (int i = 0; i < this.persons.size(); i++) {
             Person person = this.persons.get(i);
-            if (person.name() == name) {
+            if (person.name().equals(name)) { // Error 4: String comparison was done by '==' which was wrong.
                 this.persons.remove(i);
             }
         }

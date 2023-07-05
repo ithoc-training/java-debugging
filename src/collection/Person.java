@@ -15,6 +15,7 @@ public class Person {
     public Person (String firstName, String lastName) {
         this.firstName = firstName;
         this.surName = lastName;
+        this.address = new Address(); // Error 3: Addresses were never set and thus not available.
     }
 
 
@@ -22,7 +23,7 @@ public class Person {
 
         String name;
         if("".equals(firstName) && "".equals(surName)) {
-            name = null;
+            name = ""; // Error 2: Name was set to null what caused null pointer when calling trim().
         } else {
             name = "".equals(firstName) ? null : firstName + " ";
             name += "".equals(surName) ? null : surName;
