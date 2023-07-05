@@ -3,6 +3,9 @@ package collection;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * You can write more names in to it, read them out or cross them out again.
+ */
 public class Notebook {
 
     private List<Person> persons = new ArrayList<>();
